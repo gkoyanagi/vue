@@ -9,18 +9,6 @@
 	</head>
 
 	<body>
-		<style>
-			.green {
-				font-size:32pt;
-				fond-weight:plain;
-				color:green;
-			}
-			.blue {
-				font-size:24pt;
-				font-weight:bold;
-				color:blue;
-			}
-		</style>
 		<h1 class="bg-secondary text-white display-4 px-3">Vue3</h1>
 		<div id="app" class="container">
 			<p>{{ message }}</p>
@@ -33,20 +21,12 @@
 						<th>tel</th>
 					</tr>
 				</thead>
-				<template v-for="(item, index) in items">
-					<tr v-if="index % 2 == 0" class="blue">
-						<td>{{index}}</td>
-						<td>{{item.name}}</td>
-						<td>{{item.mail}}</td>
-						<td>{{item.tel}}</td>
-					</tr>
-					<tr v-else class="green">
-						<td>{{index}}</td>
-						<td>{{item.name}}</td>
-						<td>{{item.mail}}</td>
-						<td>{{item.tel}}</td>
-					</tr>
-				</template>
+				<tr v-for="(item, index) in items">
+					<td>{{index}}</td>
+					<td>{{item.name}}</td>
+					<td>{{item.mail}}</td>
+					<td>{{item.tel}}</td>
+				</tr>
 			</table>
 		</div>
 			
